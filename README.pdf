@@ -1,0 +1,39 @@
+# MarioBrosCone
+A super Mario smash bros clone, based on the first level of the original game.
+
+  Introduction
+ An Object-oriented, novice copy of the original Super Mario bros game Nintendo published in 1985, coded in the Java
+programming language, using a Gradle build on Android Studio. We used LibGDX’s framework for developing the project, using
+mostly the “box2d” library.
+
+Project development:
+ Organized the project’s core source code files into different packages, the main Game class was in our core package, and other
+than that, there were Screens, Scenes, Tools, and Sprite packages, with the Sprites package containing further two packages;
+Enemies and TileObjects, as well as the sprite class for our main character, Mario.
+ Following the instructions on LibGDX’s website, we used the gdx.jar setup file to create a gradle to further work on, and exported
+that project to Android Studio. For the ‘game-world’
+we used a tool called ‘Tiled’ which uses small, square pixelated regions to create a map, which can contain layers of objects and
+also has the functionality to bundle together many different small regions to create larger “objects”.
+ For convenience, I have attached both files as part of my report submission.
+To setup a gradle project and run our project code, follow instructions given at libgdx.com, and if there is still further difficulty
+faced, contact at sayyid.moatasim2@gmail.com.
+
+ OOP techniques
+ Abstraction
+ Hud class in Scenes package implements the abstract Disposable class, a libgdx utils library. The Playscreen class in the screens
+package implements the abstract Screen class, another libgdx library. Another class that implements an abstract libgdx library
+class is the WorldContactListener in the Tools package, implements the ContactListener class.
+Aside from these, our own Enemy class is declared abstract, and gets its abstract methods overwritten in the Goomba class, and
+lastly, the InteractiveTileObject class is also abstract.
+
+Polymorphism and Inheritance
+ Originally, these two were separate headings, but the polymorphism exhibited in our project really ties in well with every instance
+of inheritance. Our main game class, MarioGame, extends a library class called Game, the Coin and Brick classes are both child
+classes of the InteractiveTileObject abstract superclass, and our abstract Enemy class extends the libgdx library class Sprite.
+
+  Conclusion and Endnote:
+ We weren’t able to implement exception handling (due to lack of time), which is evident in the way Mario doesn’t die when a
+goomba hits him, and how the level doesn’t end even when Mario falls into the void. Aside form that, we
+implemented the aggregation and composition associations, as well as inheritance, abstract classes,
+polymorphism (both static and run-time polymorphism), method overloading and overriding, gaining a well
+rounded grasp of the java object oriented paradigm.
